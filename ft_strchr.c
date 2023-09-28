@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 14:01:33 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/28 14:25:50 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/28 15:55:36 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char	*ft_strchr(const char *s, int c)
 		return (NULL);
 	return ((char *)s);
 }
-
 
 // Exactly why is the casting needed?
 // For output to be the same type as
