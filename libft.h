@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:22:46 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/28 15:25:45 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/28 15:38:38 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	strlcat(char *dst, const char *src, size_t size);
 
 #endif
