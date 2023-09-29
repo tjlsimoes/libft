@@ -6,13 +6,13 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 10:37:18 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/29 15:05:53 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/29 16:32:08 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t		i;
 	char		*str;
@@ -31,7 +31,7 @@ void *ft_memset(void *s, int c, size_t n)
 
 // #include <stdio.h>
 // #include <string.h>
-  
+
 // int main()
 // {
 //     char str[50] = "GeeksForGeeks is for programming geeks.";
@@ -52,7 +52,7 @@ void *ft_memset(void *s, int c, size_t n)
 //       printf("%d ", arr[i]);
 // 	printf("\n");
 // }
-  
+
 // int main()
 // {
 //     int n = 10;
@@ -68,7 +68,7 @@ void *ft_memset(void *s, int c, size_t n)
 // 	ft_memset(arr2, -1, n*sizeof(arr[0]));
 //     printf("Array after memset()\n");
 // 	printArray(arr2, n);
-  
+
 //     return 0;
 // }
 

@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:07:57 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/29 15:19:15 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/29 16:29:38 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t		i;
-	char	*str;
+	char		*str;
 
 	str = (char *)s;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:55:01 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/29 16:12:15 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/29 16:31:12 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	unsigned char	cc;
-	size_t		i;
+	size_t			i;
 
 	str = (unsigned char *)s;
 	cc = (unsigned char)c;

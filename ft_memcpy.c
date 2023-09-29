@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:36:12 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/29 15:52:45 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/29 16:30:48 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*source;
-	char	*destination;
-	size_t	i;
+	char		*source;
+	char		*destination;
+	size_t		i;
 
 	i = 0;
 	source = (char *)src;
@@ -59,7 +59,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // 	char cdest[100]; 
 // 	ft_memcpy(cdest, csrc, strlen(csrc)+1); 
 // 	printf("Copied string is %s", cdest); 
-	
+
 // 	int isrc[] = {10, 20, 30, 40, 50}; 
 // 	int n = sizeof(isrc)/sizeof(isrc[0]); 
 // 	int idest[n], i; 
