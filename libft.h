@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:22:46 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/29 15:19:57 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/29 15:34:20 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int		ft_atoi(const char *nptr);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 void 	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
