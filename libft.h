@@ -6,7 +6,7 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:22:46 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2023/09/29 15:34:20 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2023/09/29 15:53:07 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 void 	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif
