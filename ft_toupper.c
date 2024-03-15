@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:11:14 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/15 16:15:20 by tjlsimoes        ###   ########.fr       */
+/*   Created: 2024/03/14 16:44:59 by tjlsimoes         #+#    #+#             */
+/*   Updated: 2024/03/14 17:00:22 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	if (97 <= c && c <= 122)
+		return (c - 32);
+	return (c);
 }
 
 // #include <stdio.h>
+// #include <unistd.h>
 // int	main(void)
 // {
-// 	printf("%d\n", ft_isalpha(65));
+// 	printf("%c\n", ft_toupper('a'));
+// 	printf("%c\n", ft_toupper('z'));
+// 	printf("%c\n", ft_toupper('1'));
+// 	printf("%c\n", ft_toupper('@'));
+// 	printf("%c\n", ft_toupper('['));
+// 	printf("%c\n", ft_toupper('A'));
+
+// 	return (0);
 // }

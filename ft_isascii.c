@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:11:14 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/15 16:15:20 by tjlsimoes        ###   ########.fr       */
+/*   Created: 2024/03/06 18:38:47 by tjlsimoes         #+#    #+#             */
+/*   Updated: 2024/03/06 18:49:00 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isascii(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (c >= 0 && c <= 177)
 	{
 		return (1);
 	}
@@ -20,7 +20,23 @@ int	ft_isalpha(int c)
 }
 
 // #include <stdio.h>
+// #include <ctype.h>
+
 // int	main(void)
 // {
-// 	printf("%d\n", ft_isalpha(65));
+// 	printf("%d\n", __isascii(9));
+// 	printf("%d\n", __isascii('9'));
+// 	printf("%d\n", __isascii('a'));
+// 	printf("%d\n", __isascii('	'));
+// 	printf("%d\n", __isascii(178));
+
+// 	printf("%d\n", ft_isascii(9));
+// 	printf("%d\n", ft_isascii('9'));
+// 	printf("%d\n", ft_isascii('a'));
+// 	printf("%d\n", ft_isascii('	'));
+// 	printf("%d\n", ft_isascii(178));
+
+// 	return (0);
 // }
+// __isascii()
+// (((9) & ~0x7f) == 0)
