@@ -6,11 +6,11 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:39:50 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/14 16:02:05 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2024/03/19 16:22:06 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(char *str)
+static unsigned int	ft_strlen(const char *str)
 {
 	int	i;
 	int	count;

@@ -6,11 +6,11 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:57:15 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/14 16:58:52 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2024/03/19 16:31:49 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(char *str)
+static unsigned int	ft_strlen(const char *str)
 {
 	int	i;
 	int	count;
@@ -31,6 +31,7 @@ unsigned int	strlcat(char *dst, const char *src, unsigned int size)
 	unsigned int	dst_len;
 
 	dst_len = ft_strlen(dst);
+	i = 0;
 	while (dst[i] != '\0')
 		dst++;
 	i = 0;
