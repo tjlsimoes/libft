@@ -6,13 +6,19 @@
 /*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 16:18:04 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/19 16:38:31 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2024/03/20 17:06:32 by tjlsimoes        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int				ft_atoi(const char *nptr);
 void			ft_bzero(void *s, unsigned int n);
