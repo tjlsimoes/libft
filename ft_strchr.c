@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 17:06:51 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/14 17:39:13 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2024/04/08 15:52:15 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,16 @@ char	*ft_strchr(const char *s, int c)
 
 	s_len = ft_strlen(s);
 	i = 0;
-	while (i < s_len)
+	while (i <= s_len)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			c_str = (char *)&(s[i]);
 			return (c_str);
 		}
 		i++;
 	}
-	return ('\0');
+	return (0);
 }
 
 // #include <stdio.h>
@@ -63,14 +63,29 @@ char	*ft_strchr(const char *s, int c)
 // 	// write(1,&c_str, 1);
 
 // 	//////////////// Test 3:
+// 	// const char	str[] = "hello";
+// 	// char	c = '\0';
+// 	// char	*c_str = ft_strchr(str, c);
+
+// 	//////////////// Test 4:
 // 	const char	str[] = "hello";
-// 	char	c = '\0';
+// 	int		c = 'h' + 256;
 // 	char	*c_str = ft_strchr(str, c);
 
-// 	write(1,&c_str, 1);
+// 	printf("%s\n", c_str);
 // 	return (0);
 // }
 
 // Passing NULL to printf causes undefined behaviour
 //   as per C standard.
 // GCC prints (null).
+
+// #include <stdio.h>
+// #include <unistd.h>
+// int	main(void)
+// {
+// 	printf("%c\n", 't' + 256);
+// 	return (0);
+// }
+// https://stackoverflow.com/questions/21530358/
+// how-256-stored-in-char-variable-and-unsigned-char

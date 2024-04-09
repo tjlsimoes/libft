@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:18:36 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/15 16:18:25 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2024/04/08 15:51:49 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 		}
 		i++;
 	}
-	return ('\0');
+	return (0);
 }
 
 // #include <stdio.h>

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjlsimoes <tjlsimoes@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 12:32:28 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/03/17 16:34:39 by tjlsimoes        ###   ########.fr       */
+/*   Updated: 2024/04/08 15:52:13 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ char	**ft_split(char const *s, char c)
 	array = (char **)malloc((get_nbr_strings(s, c) + 1) * sizeof(char *));
 	b = -1;
 	j = 0;
+	i = 0;
 	while (j < get_nbr_strings(s, c))
 	{
 		if ((s[i] == c || s[i] == '\0') && b >= 0)
