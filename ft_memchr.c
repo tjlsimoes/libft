@@ -6,23 +6,23 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 18:18:36 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:49 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:58:09 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memchr(const void *s, int c, unsigned int n)
 {
-	const char		*s_pt;
-	char			*c_pt;
-	unsigned int	i;
+	const unsigned char		*s_pt;
+	unsigned char			*c_pt;
+	unsigned int			i;
 
-	s_pt = (char *)s;
+	s_pt = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if (s_pt[i] == c)
+		if (s_pt[i] == (unsigned char)c)
 		{
-			c_pt = (char *)&(s_pt[i]);
+			c_pt = (unsigned char *)&(s_pt[i]);
 			return (c_pt);
 		}
 		i++;
@@ -75,3 +75,23 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 // Function does not work with integers.
 // Both c and the bytes of the memory area pointed to by s
 // are interpreted as unsigned char.
+// But it does work though, doesn´t it?
+// There needs only be a transformation of the output
+// from unsigned character to int, right?
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char s[] = {0, 1, 2 ,3 ,4 ,5};
+// 	ft_memchr(s, 2 + 256, 3);
+
+// 	return (0);
+// }
+
+// char type
+// These ranges translate to 0 to 255 decimal, 
+// and -128 to +127 decimal (unsigned char).
+// If an int is cast into unsigned into unsigned char,
+// the unsigned char´s decimal value will amount to
+// x % 256.
