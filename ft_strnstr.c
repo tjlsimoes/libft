@@ -6,37 +6,41 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 11:08:28 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/09 17:00:03 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/10 14:57:27 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+static void	reset_idx_search(unsigned int *lit_idx, unsigned int *big_idx)
+{
+	*lit_idx = 0;
+	*big_idx += 1;
+}
 
 char	*ft_strnstr(const char *big, const char *lit, unsigned int len)
 {
 	unsigned int		i;
-	int					j;
+	unsigned int		j;
 	int					beggining;
-	char				*substring;
 
 	if (!*lit)
 		return ((char *)big);
 	i = 0;
 	j = 0;
-	while (i < len && big[i])
+	while (big[i])
 	{
-		if (big[i] == lit[j] && i < len)
+		while (i + j < len)
 		{
-			if (j == 0)
-				beggining = i;
-			if (lit[j + 1] == '\0')
-				return (substring = (char *)(big + beggining));
-			i++;
-			j++;
-			continue ;
+			if (big[i + j] == lit[j])
+			{
+				if (j == 0)
+					beggining = i;
+				if (lit[j++ + 1] == '\0')
+					return ((char *)(big + beggining));
+			}
+			else
+				break ;
 		}
-		else if (big[i] == lit[0])
-			i--;
-		j = 0;
-		i++;
+		reset_idx_search(&j, &i);
 	}
 	return (0);
 }
@@ -46,10 +50,10 @@ char	*ft_strnstr(const char *big, const char *lit, unsigned int len)
 // int	main(void)
 // {
 // 	char haystack[30] = "aaabcabcd";
-// 	// char needle[10] = "aabc";
+// 	char needle[10] = "aabc";
 
 // 	// printf("%d\n", (unsigned int)-1);
-// 	if (ft_strnstr(haystack, "a", -1) == haystack)
+// 	if (ft_strnstr(haystack, needle, -1) == haystack + 1)
 // 		printf("Success!\n");
 // 	return (0);
 // }
