@@ -6,16 +6,16 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 12:36:37 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:03 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:27:56 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_calloc(unsigned int nmemb, unsigned int size)
+void	*ft_calloc(unsigned long nmemb, unsigned long size)
 {
 	char			*array;
-	unsigned int	i;
+	unsigned long	i;
 
 	if (nmemb == 0 || size == 0
 		|| size * nmemb > 2147483647)
