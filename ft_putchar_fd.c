@@ -6,11 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:37:07 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:59 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:43:08 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

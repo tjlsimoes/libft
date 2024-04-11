@@ -6,13 +6,15 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 16:18:04 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/09 14:41:44 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:43:21 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
+
 
 typedef struct s_list
 {

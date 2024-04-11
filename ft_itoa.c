@@ -6,11 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:57:03 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:20 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:43:11 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	get_nbr_digits(int n)
 {

@@ -6,11 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 12:36:37 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/11 10:13:42 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 16:41:53 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(unsigned long nmemb, unsigned long size)
 {

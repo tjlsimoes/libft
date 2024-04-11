@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 10:12:44 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:53 by tjorge-l         ###   ########.fr       */
+/*   Created: 2024/04/11 17:20:01 by tjorge-l          #+#    #+#             */
+/*   Updated: 2024/04/11 17:21:05 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,3 +107,7 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 // How does this third test pass?
 // Void pointer is being cast to char *, not
 // int *...?
+
+// int s[4]= {1,2,3,4}
+// int c[4];
+// ft_memcpy(c,s, 4 * sizeof(int))
