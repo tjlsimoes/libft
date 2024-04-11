@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 16:40:03 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:52:52 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 11:08:12 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,33 @@ static unsigned int	ft_strlen(const char *str)
 	return (count);
 }
 
+static char	*ft_strdup(const char *s)
+{
+	char	*str;
+	int		s_len;
+	int		i;
+
+	s_len = ft_strlen(s);
+	str = (char *)malloc(s_len + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < s_len)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	return (str);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*substring;
 
 	substring = (char *)malloc(len + 1);
+	if (start > ft_strlen(s))
+		return (substring = ft_strdup(""));
 	if (!substring)
 		return (NULL);
 	i = 0;
@@ -50,6 +71,26 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (substring);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char * s = ft_substr("tripouille", 100, 1);
+// 	s = ft_substr("1", 42, 42000000);
+// 	s = ft_substr("0123456789", 9, 10);
+// 	if (!s)
+// 		printf("NULL\n");
+// 	else
+// 	{		
+// 	// printf("%d\n", strcmp(s, "9"));
+// 	printf("%s\n", s);
+// 	free(s);
+// 	}
+
+// 	return (0);
+// }
 
 // Two words are used to describe 'len': size and length...
 // Doubt: len include null or not?
