@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:39:50 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/09 16:39:46 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:01:10 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 
 	if (size < 1)
 		return (ft_strlen(src));
-
 	i = 0;
 	while (i < size - 1 && src[i])
 	{
