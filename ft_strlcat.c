@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 15:57:15 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/09 16:15:05 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 13:00:19 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,81 +24,29 @@ static unsigned int	ft_strlen(const char *str)
 	}
 	return (count);
 }
-//////////////////////////////////////////////////////////////////////
-
-
-
-
-
-#include <string.h>
 
 unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 {
-	unsigned int		dest_len;
-	unsigned int		total_len;
-	const char	*s;
+	unsigned int	i;
+	char			*src_pt;
+	unsigned int	total;
 
-	if ((!dst || !src) && !size)
-		return (0);
-	s = src;
-	dest_len = 0;
-	while (*(dst + dest_len) && dest_len < size)
-		dest_len++;
-	if (dest_len < size)
-		total_len = dest_len + ft_strlen(s);
+	i = 0;
+	src_pt = (char *)src;
+	while (dst[i] && i < size)
+		i++;
+	if (i == size)
+		return (size + ft_strlen(src));
 	else
-		return (size + ft_strlen(s));
-	while (*s && (dest_len + 1) < size)
+		total = i + ft_strlen(src);
+	while (*src_pt && i < size - 1)
 	{
-		*(dst + dest_len) = *s++;
-		dest_len++;
+		dst[i] = *src_pt;
+		src_pt++;
+		i++;
 	}
-	*(dst + dest_len) = '\0';
-	return (total_len);
+	return (total);
 }
-
-// unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
-// {
-// 	unsigned int	i;
-// 	unsigned int	j;
-
-// 	i = 0;
-// 	j = 0;
-// 	while (i < size && dst[i])
-// 		i++;
-// 	while(i + j < size - 1 && src[j])
-// 	{
-// 		dst[i + j] = src[j];
-// 		j++;
-// 	}
-// 	if (i != size)
-// 		dst[i + j] = '\0';
-// 	return (i + ft_strlen(src));
-// }
-
-// unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
-// {
-// 	unsigned int	i;
-// 	unsigned int	dst_len;
-
-// 	dst_len = ft_strlen(dst);
-// 	i = 0;
-// 	while (dst[i] != '\0')
-// 		dst++;
-// 	i = 0;
-// 	while (i <= size - dst_len)
-// 	{
-// 		*dst = *src;
-// 		dst++;
-// 		src++;
-// 		i++;
-// 		if (i == size - dst_len)
-// 			*dst = '\0';
-// 	}
-// 	if (size > dst_len)
-// 		return (dst_len + ft_strlen(src));
-// 	return (size);
-// }
 
 // #include <stdio.h>
 // #include <string.h>
