@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 12:03:43 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:52:50 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/11 11:31:20 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,25 @@ static unsigned int	ft_strlen(const char *str)
 	return (count);
 }
 
+static char	*ft_strdup(const char *s)
+{
+	char	*str;
+	int		s_len;
+	int		i;
+
+	s_len = ft_strlen(s);
+	str = (char *)malloc(s_len + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < s_len)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	return (str);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
@@ -53,6 +72,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = (char *)s1;
 	while (any_q(*str, set))
 		str++;
+	if (!(*str))
+		return (ft_strdup(""));
 	i = ft_strlen(str) - 1;
 	while (any_q(str[i], set))
 		i--;
@@ -68,6 +89,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_str[j] = '\0';
 	return (new_str);
 }
+
+// int	main(void)
+// {
+// 	char *s = ft_strtrim("   xxx   xxx", " x");
+// 	return (0);
+// }
 
 // #include <stdio.h>
 // int	main(void)
