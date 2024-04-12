@@ -6,29 +6,31 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 12:36:37 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/11 16:41:53 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 12:21:43 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(unsigned long nmemb, unsigned long size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char			*array;
-	unsigned long	i;
+	// unsigned long	i;
 
-	if (nmemb == 0 || size == 0
-		|| size * nmemb > 2147483647)
+	if (nmemb == 0 || size == 0)
+		return (ft_strdup(""));
+	if (nmemb > INT_MAX || size > INT_MAX)
 		return (NULL);
 	array = (char *)malloc(nmemb * size);
 	if (!array)
 		return (NULL);
-	i = 0;
-	while (i < size)
-	{
-		array[i] = 0;
-		i++;
-	}
+	// i = 0;
+	// while (i < size - 1)
+	// {
+	// 	array[i] = 0;
+	// 	i++;
+	// }
+	ft_memset(array, 0, nmemb * size);
 	return ((void *)array);
 }
 
