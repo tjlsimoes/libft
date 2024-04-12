@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:42:22 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:52:35 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:22:06 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ unsigned int	ft_strlen(const char *str)
 	int		i;
 	int		count;
 
+	if (!str)
+		return (0);
 	i = 0;
 	count = 0;
 	while (str[i] != '\0')
