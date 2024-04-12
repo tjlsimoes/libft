@@ -6,26 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:43:34 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:52:17 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:28:22 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static unsigned int	ft_strlen(const char *str)
-{
-	int		i;
-	int		count;
-
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count += 1;
-		i += 1;
-	}
-	return (count);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -45,6 +30,9 @@ char	*ft_strdup(const char *s)
 	}
 	return (str);
 }
+
+// Case where NULL is passed?
+// errno is not set to indicate the error.
 
 // #include<stdio.h>
 // #include<string.h>

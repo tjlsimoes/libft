@@ -6,11 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 12:03:43 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/11 11:31:20 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:32:31 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	any_q(char c, char const *set)
 {
@@ -26,40 +26,6 @@ static int	any_q(char c, char const *set)
 		i++;
 	}
 	return (0);
-}
-
-static unsigned int	ft_strlen(const char *str)
-{
-	int		i;
-	int		count;
-
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count += 1;
-		i += 1;
-	}
-	return (count);
-}
-
-static char	*ft_strdup(const char *s)
-{
-	char	*str;
-	int		s_len;
-	int		i;
-
-	s_len = ft_strlen(s);
-	str = (char *)malloc(s_len + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < s_len)
-	{
-		str[i] = s[i];
-		i++;
-	}
-	return (str);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

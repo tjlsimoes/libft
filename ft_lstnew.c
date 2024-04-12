@@ -6,12 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:01:12 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:45 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:14:45 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

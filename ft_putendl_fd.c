@@ -6,16 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 11:09:02 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/11 16:43:07 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:24:46 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
 
 void	ft_putendl_fd(char *s, int fd)
 {

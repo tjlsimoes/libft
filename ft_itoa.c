@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:57:03 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/11 16:43:11 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:23:33 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,40 +25,6 @@ static int	get_nbr_digits(int n)
 		count++;
 	}
 	return (count);
-}
-
-static unsigned int	ft_strlen(const char *str)
-{
-	int		i;
-	int		count;
-
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count += 1;
-		i += 1;
-	}
-	return (count);
-}
-
-static char	*ft_strdup(const char *s)
-{
-	char	*str;
-	int		s_len;
-	int		i;
-
-	s_len = ft_strlen(s);
-	str = (char *)malloc(s_len + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < s_len)
-	{
-		str[i] = s[i];
-		i++;
-	}
-	return (str);
 }
 
 static void	set_variables(int *n_add, int *sign_add, int *nbr_dig_add)

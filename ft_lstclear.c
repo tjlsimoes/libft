@@ -6,12 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:29:16 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/08 15:51:27 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 10:14:29 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 // static void del(void *content)
 // {

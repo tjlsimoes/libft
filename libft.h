@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 16:18:04 by tjlsimoes         #+#    #+#             */
-/*   Updated: 2024/04/11 16:43:21 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/12 12:22:05 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -24,7 +24,7 @@ typedef struct s_list
 
 int				ft_atoi(const char *nptr);
 void			ft_bzero(void *s, unsigned int n);
-void			*ft_calloc(unsigned int nmemb, unsigned int size);
+void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
