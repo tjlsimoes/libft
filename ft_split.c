@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:55 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 16:59:28 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 17:59:18 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,28 @@ static char	*get_substring(char const *s, int b, int end)
 	return (substring);
 }
 
+static void	clear_array(char ***array)
+{
+	int i;
+	
+	i = 0;
+	while (array[i] != NULL)
+		i++;
+	while (i >= 0)
+	{
+		free(array[i]);
+		i--;
+	}
+	free(array);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
 	int		b;
 	char	**array;
+	char	*substr;
 
 	array = (char **)malloc((get_nbr_strings(s, c) + 1) * sizeof(char *));
 	if (!array)
@@ -72,7 +88,15 @@ char	**ft_split(char const *s, char c)
 	{
 		if ((s[i] == c || s[i] == '\0') && b >= 0)
 		{
-			array[j++] = get_substring(s, b, i);
+			substr = get_substring(s, b, i);
+			if (substr)
+				array[j++] = get_substring(s, b, i);
+			else
+			{
+				clear_array(&array);
+				free(array);
+				return (NULL);
+			}
 			b = -1;
 		}
 		if (s[i] != c && b < 0)
@@ -82,6 +106,34 @@ char	**ft_split(char const *s, char c)
 	array[j] = NULL;
 	return (array);
 }
+
+// char	**ft_split(char const *s, char c)
+// {
+// 	int		i;
+// 	int		j;
+// 	int		b;
+// 	char	**array;
+
+// 	array = (char **)malloc((get_nbr_strings(s, c) + 1) * sizeof(char *));
+// 	if (!array)
+// 		return (NULL);
+// 	b = -1;
+// 	j = 0;
+// 	i = 0;
+// 	while (j < get_nbr_strings(s, c))
+// 	{
+// 		if ((s[i] == c || s[i] == '\0') && b >= 0)
+// 		{
+// 			array[j++] = get_substring(s, b, i);
+// 			b = -1;
+// 		}
+// 		if (s[i] != c && b < 0)
+// 			b = i;
+// 		i++;
+// 	}
+// 	array[j] = NULL;
+// 	return (array);
+// }
 
 // Simple example:
 // s = "Hi there! How are you doing?";
