@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:49:04 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:49:05 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 15:44:29 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*substring;
 
-	substring = (char *)malloc(len + 1);
-	if (start > ft_strlen(s))
+	if (start >= ft_strlen(s) || len == 0)
 		return (substring = ft_strdup(""));
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	substring = (char *)malloc(len + 1);
 	if (!substring)
 		return (NULL);
 	i = 0;
 	while (i < len)
 	{
-		if (start + i > ft_strlen(s))
-			return (NULL);
 		substring[i] = s[start + i];
 		if (s[start + i + 1] == '\0' || i + 1 == len)
 		{
