@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:49:20 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:49:21 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 11:59:21 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <errno.h>
 
 typedef struct s_list
 {
