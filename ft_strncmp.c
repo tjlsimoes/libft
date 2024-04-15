@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:41 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:42 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 10:39:58 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	while (n && (*s1 != '\0' || *s2 != '\0'))
 	{
 		if (*s1 != *s2)
-			return (*s1 - *s2);
+			return ((unsigned char)*s1 - (unsigned char)*s2);
 		n--;
 		s1++;
 		s2++;
@@ -25,6 +25,12 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 
 // #include <stdio.h>
 // #include <string.h>
+// int	main(void)
+// {
+// 	printf("%d\n", strncmp("test\200", "test\0", 6));
+// 	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
+// 	return (0);
+// }
 // int main(void)
 // {
 // 	printf("%d\n", strncmp("hello", "zdravo", 0));
