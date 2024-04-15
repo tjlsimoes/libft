@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:20 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:21 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 12:41:24 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 		src_pt++;
 		i++;
 	}
+	dst[i] = '\0';
 	return (total);
 }
 
