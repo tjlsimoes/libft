@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:36 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:37 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 14:34:29 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*new_str;
 
 	new_str = (char *)malloc(ft_strlen(s) + 1);
+	if (!new_str)
+		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
 	{
