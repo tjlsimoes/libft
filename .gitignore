@@ -5,3 +5,5 @@ a.out
 foo.txt
 main.c
 main
+*.o
+*.a
