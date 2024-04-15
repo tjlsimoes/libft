@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:16 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:47:17 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 14:27:32 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	i = 0;
 	dest_pt = dest;
 	src_pt = src;
+	if (!dest && !src)
+		return (0);
 	while (i < n)
 	{
 		dest_pt[i] = src_pt[i];
