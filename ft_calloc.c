@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:45:24 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:45:26 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 10:58:41 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char			*array;
-	// unsigned long	i;
 
 	if (nmemb == 0 || size == 0)
 		return (ft_strdup(""));
@@ -24,12 +23,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	array = (char *)malloc(nmemb * size);
 	if (!array)
 		return (NULL);
-	// i = 0;
-	// while (i < size - 1)
-	// {
-	// 	array[i] = 0;
-	// 	i++;
-	// }
 	ft_memset(array, 0, nmemb * size);
 	return ((void *)array);
 }
