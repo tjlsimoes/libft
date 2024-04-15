@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:55 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 13:02:22 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 16:59:28 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static char	*get_substring(char const *s, int b, int end)
 	char	*substring;
 
 	substring = (char *)malloc((end - b) + 1);
+	if (!substring)
+		return (NULL);
 	i = 0;
 	while (b + i < end)
 	{
