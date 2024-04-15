@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:55 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:47:56 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 13:02:22 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,14 @@ static char	*get_substring(char const *s, int b, int end)
 	int		i;
 	char	*substring;
 
-	substring = (char *)malloc((end - b) + 2);
+	substring = (char *)malloc((end - b) + 1);
 	i = 0;
 	while (b + i < end)
 	{
 		substring[i] = s[b + i];
 		i++;
 	}
+	substring[i] = '\0';
 	return (substring);
 }
 
@@ -60,6 +61,8 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 
 	array = (char **)malloc((get_nbr_strings(s, c) + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
 	b = -1;
 	j = 0;
 	i = 0;
