@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:05 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:06 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 12:10:28 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,32 @@ char	*ft_strdup(const char *s)
 	s_len = ft_strlen(s);
 	str = (char *)malloc(s_len + 1);
 	if (!str)
+	{
+		errno = ENOMEM;
 		return (NULL);
+	}
 	i = 0;
 	while (i < s_len)
 	{
 		str[i] = s[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
+
+// int main(void)
+// {
+// 	char	str[] = "lorem ipsum dolor sit amet";
+// 	char	*str_dup;
+// 	str_dup = ft_strdup(str);
+// 	if (!str_dup)
+// 		return (0);
+// 	printf("%s|\n", str_dup);
+// 	printf("%d\n", strcmp(str, str_dup));
+// 	free(str_dup);
+// 	return (0);
+// }
 
 // Case where NULL is passed?
 // errno is not set to indicate the error.
