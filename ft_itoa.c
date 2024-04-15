@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:08 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:46:09 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/15 11:42:46 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,17 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+// #include <string.h>
+// int	main(void)
+// {
+// 	char	*str;
+// 	str = ft_itoa(-2147483648LL);
+// 	printf("%s\n", str);
+// 	printf("%d\n", strcmp(str, "-2147483648"));
+// 	free(str);
+// 	return (0);
+// }
 
 // Get number of digits
 // Add byte for NULL and sign if
