@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:48 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:46:49 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:14:25 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,95 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	**new_lst;
-	t_list	*current_node;
+	t_list	*head;
+	t_list	*new;
+	void	*content;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	new_lst = (t_list **)malloc(ft_lstsize(lst) * sizeof(t_list *));
-	if (!new_lst)
-		return (NULL);
-	current_node = *new_lst;
+	head = NULL;
 	while (lst)
 	{
-		current_node->content = ft_strdup((*f)(lst->content));
-		if (!current_node->content)
-			ft_lstclear(*new_lst);
-		current_node = current_node->next;
+		content = f(lst->content);
+		new = ft_lstnew(content);
+		if (!new)
+		{
+			del(content);
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, new);
 		lst = lst->next;
 	}
-	return (*new_lst);
+	return (head);
 }
+
+// void del(void *content)
+// {
+// 	if (content)
+// 		free(content);
+// 	content = NULL;
+// }
+
+// void	*set_hello(void *s)
+// {
+// 	return (s = ft_strdup("hello"));
+// }
+
+// int	main(void)
+// {
+// 	t_list	*original;
+// 	t_list	*new;
+// 	t_list	*new_end;
+// 	// t_list	*last;
+// 	// t_list	*previous;
+// 	t_list	*node;
+// 	t_list	*new_lst;
+
+// 	original = ft_lstnew(ft_strdup("Hello!"));
+// 	// original = NULL;
+// 	new = ft_lstnew(ft_strdup("Before!"));
+// 	// new = NULL;
+
+// 	ft_lstadd_front(&original, new);
+
+// 	printf("Size: %d\n", ft_lstsize(new));
+	
+// 	new_end = ft_lstnew(ft_strdup("After!"));
+// 	ft_lstadd_back(&new, new_end);
+
+// 	node = new;
+// 	while (node)
+// 	{
+// 		printf("%s\n", (char *)node->content);
+// 		node = node->next;
+// 	}
+
+// 	new_lst = ft_lstmap(new, set_hello, del);
+
+// 	printf("New list\n");
+// 	node = new_lst;
+// 	while (node)
+// 	{
+// 		if (node->content)
+// 			printf("%s\n", (char *)node->content);
+// 		node = node->next;
+// 	}
+
+// 	printf("Original list\n");
+// 	node = new;
+// 	while (node)
+// 	{
+// 		if (node->content)
+// 			printf("%s\n", (char *)node->content);
+// 		node = node->next;
+// 	}
+
+// 	ft_lstclear(&new, (*del));
+// 	ft_lstclear(&new_lst, (*del));
+// 	if (!new)
+// 		printf("Pointer to the list is set to NULL\n");
+// 	if (!new_lst)
+// 		printf("Pointer to the list is set to NULL\n");
+// 	return (0);
+// }

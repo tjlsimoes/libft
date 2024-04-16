@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:23 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:46:25 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 11:06:02 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // 	free(content);
 // }
 
-void	ft_lst_clear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*previous_node;
 	t_list	*current_node;
@@ -25,7 +25,7 @@ void	ft_lst_clear(t_list **lst, void (*del)(void *))
 	if (!lst || !del)
 		return ;
 	current_node = *lst;
-	while (current_node != '\0')
+	while (current_node != NULL)
 	{
 		previous_node = current_node;
 		(*del)(previous_node->content);
