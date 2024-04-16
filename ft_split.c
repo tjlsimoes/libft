@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:55 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 17:59:18 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 10:22:28 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ static int	get_nbr_strings(char const *s, char c)
 	return (count);
 }
 
-static char	*get_substring(char const *s, int b, int end)
+static char	*get_substring(char const *s, int b, int end, int *actual_b)
 {
 	int		i;
 	char	*substring;
 
+	*actual_b = -1;
 	substring = (char *)malloc((end - b) + 1);
 	if (!substring)
 		return (NULL);
@@ -55,19 +56,15 @@ static char	*get_substring(char const *s, int b, int end)
 	return (substring);
 }
 
-static void	clear_array(char ***array)
+static void	*clear_array(char **array, int j)
 {
-	int i;
-	
-	i = 0;
-	while (array[i] != NULL)
-		i++;
-	while (i >= 0)
+	while (j >= 0)
 	{
-		free(array[i]);
-		i--;
+		free(array[j]);
+		j--;
 	}
 	free(array);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -76,7 +73,6 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		b;
 	char	**array;
-	char	*substr;
 
 	array = (char **)malloc((get_nbr_strings(s, c) + 1) * sizeof(char *));
 	if (!array)
@@ -88,16 +84,9 @@ char	**ft_split(char const *s, char c)
 	{
 		if ((s[i] == c || s[i] == '\0') && b >= 0)
 		{
-			substr = get_substring(s, b, i);
-			if (substr)
-				array[j++] = get_substring(s, b, i);
-			else
-			{
-				clear_array(&array);
-				free(array);
-				return (NULL);
-			}
-			b = -1;
+			array[j] = get_substring(s, b, i, &b);
+			if (!array[j++])
+				return (clear_array(array, --j));
 		}
 		if (s[i] != c && b < 0)
 			b = i;
@@ -299,6 +288,8 @@ char	**ft_split(char const *s, char c)
 // 	free(output);
 // 	return (0);
 // }
+
+// clear_array(output, i);
 
 // Subject lists free() as external function...
 // Is it of required use though?
