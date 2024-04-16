@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:53 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:46:54 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 12:18:42 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*lstnew;
 
-	lstnew = (t_list *)malloc(sizeof(t_list *));
+	lstnew = (t_list *)malloc(sizeof(t_list));
 	if (!lstnew)
 		return (NULL);
 	lstnew->content = content;
