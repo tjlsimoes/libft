@@ -6,7 +6,7 @@
 #    By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 12:49:31 by tjorge-l          #+#    #+#              #
-#    Updated: 2024/04/16 10:52:54 by tjorge-l         ###   ########.fr        #
+#    Updated: 2024/04/16 10:57:03 by tjorge-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ft_tolower.c ft_toupper.c \
 
 BSRC := ft_lstnew.c ft_lstadd_front.c \
 ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-ft_lstclear.c ft_listiter.c ft_lstmap.c \
+ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 
 OBJ := $(patsubst %.c,%.o,$(SRC))
 
