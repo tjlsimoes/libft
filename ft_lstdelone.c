@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:30 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/16 14:37:43 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:16:59 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // 	}
 
 // 	printf("Size: %d\n", ft_lstsize(new));
-	
+
 // 	// new_end = ft_lstnew("After!");
 // 	// ft_lstadd_back(&new, new_end);
 

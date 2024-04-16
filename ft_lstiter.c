@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:36 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/16 15:22:12 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:17:18 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 // 	ft_lstadd_front(&original, new);
 
 // 	printf("Size: %d\n", ft_lstsize(new));
-	
+
 // 	new_end = ft_lstnew(ft_strdup("After!"));
 // 	ft_lstadd_back(&new, new_end);
 
@@ -74,7 +74,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 // 	return (0);
 // }
 
-
 // int	main(void)
 // {
 // 	t_list	*original;
@@ -92,7 +91,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 // 	ft_lstadd_front(&original, new);
 
 // 	printf("Size: %d\n", ft_lstsize(new));
-	
+
 // 	new_end = ft_lstnew(ft_strdup("After!"));
 // 	ft_lstadd_back(&new, new_end);
 

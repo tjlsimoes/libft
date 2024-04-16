@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:48 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/16 17:14:25 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:17:30 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	ft_lstadd_front(&original, new);
 
 // 	printf("Size: %d\n", ft_lstsize(new));
-	
+
 // 	new_end = ft_lstnew(ft_strdup("After!"));
 // 	ft_lstadd_back(&new, new_end);
 

@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:46:13 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/16 16:32:13 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:16:33 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // 	last = ft_lstlast(new);
 // 	if (last)
 // 		printf("Previous last node content: %s\n", (char *)last->content);
-	
+
 // 	new_end = ft_lstnew("After!");
 // 	ft_lstadd_back(&new, new_end);
 
