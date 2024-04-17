@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:30 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 14:18:31 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:37:39 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int		i;
-	int		count;
+	size_t		i;
+	size_t		count;
 
 	i = 0;
 	count = 0;

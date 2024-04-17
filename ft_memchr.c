@@ -6,15 +6,17 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:05 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:47:06 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:42:14 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, unsigned int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char		*s_pt;
 	unsigned char			*c_pt;
-	unsigned int			i;
+	size_t					i;
 
 	s_pt = (unsigned char *)s;
 	i = 0;

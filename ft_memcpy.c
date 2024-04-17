@@ -6,15 +6,17 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:16 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 14:27:32 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:41:58 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char				*dest_pt;
-	const char			*src_pt;
-	unsigned int		i;
+	char			*dest_pt;
+	const char		*src_pt;
+	size_t			i;
 
 	i = 0;
 	dest_pt = dest;

@@ -6,30 +6,17 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:20 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:20:26 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:41:43 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(const char *str)
-{
-	int	i;
-	int	count;
+#include "libft.h"
 
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count++;
-		i++;
-	}
-	return (count);
-}
-
-unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	char			*src_pt;
-	unsigned int	total;
+	size_t		i;
+	char		*src_pt;
+	size_t		total;
 
 	i = 0;
 	src_pt = (char *)src;

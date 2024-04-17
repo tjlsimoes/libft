@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:05 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 14:28:49 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:53:50 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*str;
-	int		s_len;
-	int		i;
+	char		*str;
+	size_t		s_len;
+	size_t		i;
 
 	s_len = ft_strlen(s);
 	str = (char *)malloc(s_len + 1);

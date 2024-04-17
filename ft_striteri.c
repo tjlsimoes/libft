@@ -6,13 +6,13 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:10 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:11 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:46:52 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
+	unsigned int		i;
 
 	if (!s || !f)
 		return ;

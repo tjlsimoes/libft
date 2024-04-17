@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:25 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:07:37 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:38:51 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	alt_strlen(const char *str)
 {
-	int		i;
-	int		count;
+	size_t		i;
+	size_t		count;
 
 	if (!str)
 		return (0);
@@ -29,9 +29,9 @@ static size_t	alt_strlen(const char *str)
 	return (count);
 }
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (size < 1)
 		return (alt_strlen(src));

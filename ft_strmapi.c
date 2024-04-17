@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:36 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 14:30:13 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:53:34 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	alt_strlen(const char *str)
 {
-	int		i;
-	int		count;
+	size_t		i;
+	size_t		count;
 
 	if (!str)
 		return (0);
@@ -31,8 +31,8 @@ static size_t	alt_strlen(const char *str)
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	char	*new_str;
+	unsigned int		i;
+	char				*new_str;
 
 	new_str = (char *)malloc(alt_strlen(s) + 1);
 	if (!new_str)

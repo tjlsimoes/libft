@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:53 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 14:51:14 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:56:03 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	alt_strlen(const char *str)
 {
-	int		i;
-	int		count;
+	size_t		i;
+	size_t		count;
 
 	if (!str)
 		return (0);
@@ -31,8 +31,8 @@ static size_t	alt_strlen(const char *str)
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	*c_str;
+	int			i;
+	char		*c_str;
 
 	i = alt_strlen(s);
 	while (i >= 0)

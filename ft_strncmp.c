@@ -6,11 +6,13 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:41 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 10:39:58 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:39:18 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (n && (*s1 != '\0' || *s2 != '\0'))
 	{

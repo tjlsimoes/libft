@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:59 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 14:47:12 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:53:24 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	alt_strlen(const char *str)
 {
-	int		i;
-	int		count;
+	size_t		i;
+	size_t		count;
 
 	if (!str)
 		return (0);
@@ -31,9 +31,9 @@ static size_t	alt_strlen(const char *str)
 
 static char	*alt_strdup(const char *s)
 {
-	char	*str;
-	int		s_len;
-	int		i;
+	char		*str;
+	size_t		s_len;
+	size_t		i;
 
 	s_len = alt_strlen(s);
 	str = (char *)malloc(s_len + 1);
@@ -70,10 +70,10 @@ static int	any_q(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*str;
-	char	*new_str;
+	size_t		i;
+	size_t		j;
+	char		*str;
+	char		*new_str;
 
 	str = (char *)s1;
 	while (any_q(*str, set))

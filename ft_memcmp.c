@@ -6,11 +6,13 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:10 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:47:11 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:35:03 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*s1_pt;
 	const unsigned char	*s2_pt;

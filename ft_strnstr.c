@@ -6,21 +6,23 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:47 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:47 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:43:05 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static void	reset_idx_search(unsigned int *lit_idx, unsigned int *big_idx)
+#include "libft.h"
+
+static void	reset_idx_search(size_t *lit_idx, size_t *big_idx)
 {
 	*lit_idx = 0;
 	*big_idx += 1;
 }
 
-char	*ft_strnstr(const char *big, const char *lit, unsigned int len)
+char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
-	unsigned int		i;
-	unsigned int		j;
-	int					beggining;
+	size_t		i;
+	size_t		j;
+	size_t		beggining;
 
 	if (!*lit)
 		return ((char *)big);
