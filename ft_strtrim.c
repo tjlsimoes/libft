@@ -6,11 +6,51 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:59 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:49:00 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:47:12 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	alt_strlen(const char *str)
+{
+	int		i;
+	int		count;
+
+	if (!str)
+		return (0);
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		count += 1;
+		i += 1;
+	}
+	return (count);
+}
+
+static char	*alt_strdup(const char *s)
+{
+	char	*str;
+	int		s_len;
+	int		i;
+
+	s_len = alt_strlen(s);
+	str = (char *)malloc(s_len + 1);
+	if (!str)
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
+	i = 0;
+	while (i < s_len)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
 
 static int	any_q(char c, char const *set)
 {
@@ -39,8 +79,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (any_q(*str, set))
 		str++;
 	if (!(*str))
-		return (ft_strdup(""));
-	i = ft_strlen(str) - 1;
+		return (alt_strdup(""));
+	i = alt_strlen(str) - 1;
 	while (any_q(str[i], set))
 		i--;
 	new_str = (char *)malloc(i + 2);

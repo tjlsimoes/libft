@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:20 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 12:41:24 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:20:26 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,31 @@ unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 
 // #include <stdio.h>
 // #include <string.h>
+// #include <bsd/string.h>
 
 // int	main(void)
 // {
-// 	char dest[30]; memset(dest, 0, 30);
-// 	char * src = (char *)"AAAAAAAAA";
+// ////////// Test 1:
+// 	// char dest[30]; memset(dest, 0, 30);
+// 	// char * src = (char *)"AAAAAAAAA";
 
-// 	printf("%d\n", ft_strlcat(dest, src, 0));
-// 	if (ft_strlcat(dest, src, 0) == strlen(src))
-// 		printf("Success!\n");
+// 	// printf("%d\n", ft_strlcat(dest, src, 0));
+// 	// if (ft_strlcat(dest, src, 0) == strlen(src))
+// 	// 	printf("Success!\n");
+
+// ////////// Other tests:
+
+// 	// Segmentation faults>
+
+// 	// strlcat(NULL, NULL, 0);
+// 	// ft_strlcat(NULL, NULL, 0);
+
+// 	// strlcat("hello", NULL, 0);
+// 	// ft_strlcat("hello", NULL, 0);
+
+// 	// No seg fault:
+// 	// strlcat("hello", "bye", 0);
+// 	// ft_strlcat("hello", "bye", 0);
 // 	return (0);
 // }
 

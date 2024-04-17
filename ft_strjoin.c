@@ -6,11 +6,28 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:15 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:16 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:28:08 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	alt_strlen(const char *str)
+{
+	int		i;
+	int		count;
+
+	if (!str)
+		return (0);
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		count += 1;
+		i += 1;
+	}
+	return (count);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -18,8 +35,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s1_len;
 	int		i;
 
-	s1_len = ft_strlen(s1);
-	str = (char *)malloc(s1_len + ft_strlen(s2) + 1);
+	s1_len = alt_strlen(s1);
+	str = (char *)malloc(s1_len + alt_strlen(s2) + 1);
 	if (!str)
 		return (NULL);
 	i = 0;

@@ -6,21 +6,61 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:49:04 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 15:44:29 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:37:18 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	alt_strlen(const char *str)
+{
+	int		i;
+	int		count;
+
+	if (!str)
+		return (0);
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		count += 1;
+		i += 1;
+	}
+	return (count);
+}
+
+static char	*alt_strdup(const char *s)
+{
+	char	*str;
+	int		s_len;
+	int		i;
+
+	s_len = alt_strlen(s);
+	str = (char *)malloc(s_len + 1);
+	if (!str)
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
+	i = 0;
+	while (i < s_len)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*substring;
 
-	if (start >= ft_strlen(s) || len == 0)
-		return (substring = ft_strdup(""));
-	if (start + len > ft_strlen(s))
-		len = ft_strlen(s) - start;
+	if (start >= alt_strlen(s) || len == 0)
+		return (substring = alt_strdup(""));
+	if (start + len > alt_strlen(s))
+		len = alt_strlen(s) - start;
 	substring = (char *)malloc(len + 1);
 	if (!substring)
 		return (NULL);

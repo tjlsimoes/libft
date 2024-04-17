@@ -6,15 +6,19 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:25 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:48:25 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:07:37 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(const char *str)
-{
-	int	i;
-	int	count;
+#include "libft.h"
 
+static size_t	alt_strlen(const char *str)
+{
+	int		i;
+	int		count;
+
+	if (!str)
+		return (0);
 	i = 0;
 	count = 0;
 	while (str[i] != '\0')
@@ -30,7 +34,7 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 	unsigned int	i;
 
 	if (size < 1)
-		return (ft_strlen(src));
+		return (alt_strlen(src));
 	i = 0;
 	while (i < size - 1 && src[i])
 	{
@@ -38,20 +42,26 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 		i += 1;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(src));
+	return (alt_strlen(src));
 }
 
 // #include <stdio.h>
 // #include <string.h>
+// #include <bsd/string.h>
 
 // int	main(void)
 // {
-// 	char src[] = "coucou";
-// 	char dest[10]; memset(dest, 'A', 10);
+// ///////// Test 1:
+// // 	char src[] = "coucou";
+// // 	char dest[10]; memset(dest, 'A', 10);
 
-// 	printf("%d\n", ft_strlcpy(dest, src, 0));
-// 	if (dest[0] == 'A')
-// 		printf("Success!\n");
+// // 	printf("%d\n", ft_strlcpy(dest, src, 0));
+// // 	if (dest[0] == 'A')
+// // 		printf("Success!\n");
+
+// ///////// Test 2:
+// 	// strlcpy(NULL, "hello", 1);
+// 	// ft_strlcpy(NULL, "hello", 1);
 // 	return (0);
 // }
 

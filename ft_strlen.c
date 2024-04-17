@@ -6,17 +6,17 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:30 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 14:08:18 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:18:31 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int		i;
 	int		count;
 
-	if (!str)
-		return (0);
 	i = 0;
 	count = 0;
 	while (str[i] != '\0')
@@ -26,6 +26,23 @@ unsigned int	ft_strlen(const char *str)
 	}
 	return (count);
 }
+
+// size_t	ft_strlen(const char *str)
+// {
+// 	int		i;
+// 	int		count;
+
+// 	if (!str)
+// 		return (0);
+// 	i = 0;
+// 	count = 0;
+// 	while (str[i] != '\0')
+// 	{
+// 		count += 1;
+// 		i += 1;
+// 	}
+// 	return (count);
+// }
 
 // Original function uses size_t as input.
 // #include <stdio.h>

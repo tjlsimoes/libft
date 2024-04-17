@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:05 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/15 12:10:28 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/17 14:28:49 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,23 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
+
+// static size_t	alt_strlen(const char *str)
+// {
+// 	int		i;
+// 	int		count;
+
+// 	if (!str)
+// 		return (0);
+// 	i = 0;
+// 	count = 0;
+// 	while (str[i] != '\0')
+// 	{
+// 		count += 1;
+// 		i += 1;
+// 	}
+// 	return (count);
+// }
 
 // int main(void)
 // {
