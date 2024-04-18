@@ -6,7 +6,7 @@
 #    By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 12:49:31 by tjorge-l          #+#    #+#              #
-#    Updated: 2024/04/18 10:58:18 by tjorge-l         ###   ########.fr        #
+#    Updated: 2024/04/18 13:12:30 by tjorge-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ BOBJ := $(BSRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -q libft.a $(wildcard $(OBJ))
+	ar -q libft.a $(OBJ)
 #	$(CC) -c $(CFLAGS) $(OBJ) -o ##$(NAME)
 
 bonus: $(OBJ) $(BOBJ)
