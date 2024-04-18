@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:45:24 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:59:59 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:21:26 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char			*array;
+	void		*array;
 
-	if (nmemb == 0 || size == 0)
-		return (ft_strdup(""));
 	if (nmemb > INT_MAX || size > INT_MAX)
 		return (NULL);
-	array = (char *)malloc(nmemb * size);
+	array = malloc(nmemb * size);
 	if (!array)
 		return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (array);
 	ft_memset(array, 0, nmemb * size);
-	return ((void *)array);
+	return (array);
 }
 
 ////////////////// Test 1:
