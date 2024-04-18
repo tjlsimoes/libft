@@ -6,7 +6,7 @@
 #    By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 12:49:31 by tjorge-l          #+#    #+#              #
-#    Updated: 2024/04/16 10:57:03 by tjorge-l         ###   ########.fr        #
+#    Updated: 2024/04/18 10:58:18 by tjorge-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,9 @@ BSRC := ft_lstnew.c ft_lstadd_front.c \
 ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 
-OBJ := $(patsubst %.c,%.o,$(SRC))
+OBJ := $(SRC:.c=.o)
 
-BOBJ := $(patsubst %.c,%.o,$(BSRC))
+BOBJ := $(BSRC:.c=.o)
 
 .PHONY: all bonus clean fclean re
 
@@ -46,7 +46,7 @@ bonus: $(OBJ) $(BOBJ)
 	ar -q libft.a $?
 
 clean:
-	$(RM) $(wildcard $(OBJ))
+	$(RM) $(OBJ) $(BOBJ)
 
 fclean: clean
 	$(RM) $(NAME)
