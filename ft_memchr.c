@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:05 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:42:14 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/18 10:15:00 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // #include <stdio.h>

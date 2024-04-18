@@ -6,11 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:44:50 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:44:52 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/18 09:58:19 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);

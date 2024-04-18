@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:36 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:53:34 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/18 10:44:26 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int		i;
 	char				*new_str;
 
+	if (!f)
+		return (NULL);
 	new_str = (char *)malloc(alt_strlen(s) + 1);
 	if (!new_str)
 		return (NULL);
@@ -88,10 +90,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 // int	main(void)
 // {
-// 	char	*output;
+// 	// char	*output;
 
-// 	output = ft_strmapi("Hello, World!", uppercase);
-// 	printf("%s\n", output);
+// 	// output = ft_strmapi("Hello, World!", uppercase);
+// 	// printf("%s\n", output);
+
+// 	ft_strmapi("Hello, World!", NULL);
 // 	return (0);
 // }
 
