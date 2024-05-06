@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:05 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:53:50 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/04/26 09:51:29 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ char	*ft_strdup(const char *s)
 	s_len = ft_strlen(s);
 	str = (char *)malloc(s_len + 1);
 	if (!str)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	i = 0;
 	while (i < s_len)
 	{

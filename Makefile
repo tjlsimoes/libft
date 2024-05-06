@@ -6,7 +6,7 @@
 #    By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 12:49:31 by tjorge-l          #+#    #+#              #
-#    Updated: 2024/04/18 13:12:30 by tjorge-l         ###   ########.fr        #
+#    Updated: 2024/04/26 09:51:05 by tjorge-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,16 +34,15 @@ OBJ := $(SRC:.c=.o)
 
 BOBJ := $(BSRC:.c=.o)
 
-.PHONY: all bonus clean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -q libft.a $(OBJ)
+	ar -crs $(NAME) $(OBJ)
 #	$(CC) -c $(CFLAGS) $(OBJ) -o ##$(NAME)
 
 bonus: $(OBJ) $(BOBJ)
-	ar -q libft.a $?
+	ar -crs $(NAME) $?
 
 clean:
 	$(RM) $(OBJ) $(BOBJ)
@@ -53,5 +52,6 @@ fclean: clean
 
 re: fclean all
 
+.PHONY: all bonus clean fclean re
 # https://www.baeldung.com/linux/a-so-extension-files
 # https://medium.com/@ayogun/makefile-basics-beginner-intermediate-c92377542c2c
