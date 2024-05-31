@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:30 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:37:39 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:22:46 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t		i;
-	size_t		count;
+	int		i;
+	int		count;
 
+	if (!str)
+		return (0);
 	i = 0;
 	count = 0;
 	while (str[i] != '\0')
@@ -26,23 +28,6 @@ size_t	ft_strlen(const char *str)
 	}
 	return (count);
 }
-
-// size_t	ft_strlen(const char *str)
-// {
-// 	int		i;
-// 	int		count;
-
-// 	if (!str)
-// 		return (0);
-// 	i = 0;
-// 	count = 0;
-// 	while (str[i] != '\0')
-// 	{
-// 		count += 1;
-// 		i += 1;
-// 	}
-// 	return (count);
-// }
 
 // Original function uses size_t as input.
 // #include <stdio.h>
