@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:50 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/05/31 10:29:38 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:38:10 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	if (!s || !fd || fd < 0)
-		return (NULL);
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
