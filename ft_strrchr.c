@@ -6,35 +6,18 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:53 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:56:03 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:25:41 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	alt_strlen(const char *str)
-{
-	size_t		i;
-	size_t		count;
-
-	if (!str)
-		return (0);
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count += 1;
-		i += 1;
-	}
-	return (count);
-}
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int			i;
 	char		*c_str;
 
-	i = alt_strlen(s);
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)

@@ -6,28 +6,11 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:36 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/18 10:44:26 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:25:31 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	alt_strlen(const char *str)
-{
-	size_t		i;
-	size_t		count;
-
-	if (!str)
-		return (0);
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count += 1;
-		i += 1;
-	}
-	return (count);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -36,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!f)
 		return (NULL);
-	new_str = (char *)malloc(alt_strlen(s) + 1);
+	new_str = (char *)malloc(ft_strlen(s) + 1);
 	if (!new_str)
 		return (NULL);
 	i = 0;

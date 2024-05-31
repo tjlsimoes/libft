@@ -6,35 +6,18 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:48:25 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:38:51 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:25:18 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	alt_strlen(const char *str)
-{
-	size_t		i;
-	size_t		count;
-
-	if (!str)
-		return (0);
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		count += 1;
-		i += 1;
-	}
-	return (count);
-}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
 	if (size < 1)
-		return (alt_strlen(src));
+		return (ft_strlen(src));
 	i = 0;
 	while (i < size - 1 && src[i])
 	{
@@ -42,7 +25,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i += 1;
 	}
 	dst[i] = '\0';
-	return (alt_strlen(src));
+	return (ft_strlen(src));
 }
 
 // #include <stdio.h>
