@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:38 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:47:39 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:29:35 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s || !fd || fd < 0)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);

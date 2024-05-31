@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:21 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:35:53 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:31:03 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*dest_pt;
 	char	*src_pt;
 
-	dest_pt = (char *)dest;
-	src_pt = (char *)src;
 	if (!dest && !src)
 		return (0);
+	dest_pt = (char *)dest;
+	src_pt = (char *)src;
 	if (dest_pt <= src_pt)
 	{
 		while (n--)

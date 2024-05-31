@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:32 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/18 10:32:01 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:31:55 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (!fd || fd < 0)
+		return ;
 	write(fd, &c, 1);
 }
 

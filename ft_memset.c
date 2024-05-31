@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:27 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/17 15:43:21 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:31:26 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t		i;
 	char		*str;
 
+	if (!s)
+		return (NULL);
 	str = s;
 	i = 0;
 	while (i < n)

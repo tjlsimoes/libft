@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:47:43 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/04/12 12:47:44 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/05/31 10:29:29 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ static void	ft_putstr_fd_alt(char *s, int fd)
 {
 	int	i;
 
+	if (!s || !fd || fd < 0)
+		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
 	{
