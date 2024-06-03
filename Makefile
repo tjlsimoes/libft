@@ -6,7 +6,7 @@
 #    By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 12:49:31 by tjorge-l          #+#    #+#              #
-#    Updated: 2024/04/26 09:51:05 by tjorge-l         ###   ########.fr        #
+#    Updated: 2024/06/03 11:14:34 by tjorge-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,7 @@ ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c \
 ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c \
 ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
 ft_tolower.c ft_toupper.c \
-
-BSRC := ft_lstnew.c ft_lstadd_front.c \
+ft_lstnew.c ft_lstadd_front.c \
 ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 
@@ -40,9 +39,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar -crs $(NAME) $(OBJ)
 #	$(CC) -c $(CFLAGS) $(OBJ) -o ##$(NAME)
-
-bonus: $(OBJ) $(BOBJ)
-	ar -crs $(NAME) $?
 
 clean:
 	$(RM) $(OBJ) $(BOBJ)
