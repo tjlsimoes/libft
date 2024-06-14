@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:49:20 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/06/03 15:33:13 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/06/14 11:22:32 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-char			*ft_strjoin(char const *s1, char const *s2);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
@@ -67,4 +66,18 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
+# ifndef FD_MAX
+#  define FD_MAX 4096
+# endif
+
+int		ft_strcpy(char *str, char *s, int start);
+char	*ft_strjoin(char *s1, char *s2);
+char	*get_next_line(int fd);
+int		idx_line_break(char *str);
+void	update_end(int *end, int b, char const *s);
 #endif
