@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjorge-l <tjorge-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:19:38 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/06/14 13:24:28 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/06/14 15:52:59 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	int		i;
 
 	s1_len = ft_strlen(s1);
-	str = (char *)malloc(s1_len + ft_strlen(s2) + 1);
+	str = (char *)ft_calloc(s1_len + ft_strlen(s2) + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjorge-l <tjorge-l@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:20:02 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/06/14 13:22:34 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/06/14 15:53:00 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*get_substring(char const *s, int b, int end, int remains)
 		return (NULL);
 	if (end == -1)
 		update_end(&end, b, s);
-	substring = (char *)malloc((end - b) + 2);
+	substring = (char *)ft_calloc((end - b) + 2, sizeof(char));
 	if (!substring)
 		return (NULL);
 	i = 0;
@@ -57,7 +57,7 @@ char	*str_with_lb_eof(int fd, char *str)
 	char	*buffer;
 	int		chars_read;
 
-	buffer = (char *)malloc(BUFFER_SIZE + 1);
+	buffer = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!buffer)
 		return (NULL);
 	chars_read = 5;
