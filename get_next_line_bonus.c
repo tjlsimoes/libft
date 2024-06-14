@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:20:02 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/06/14 11:24:44 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/06/14 13:22:34 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*str_with_lb_eof(int fd, char *str)
 			return (free_null_rt(buffer));
 		buffer[chars_read] = '\0';
 		if (!str)
-			str = ft_strjoin(NULL, buffer);
+			str = ft_strjoin("", buffer);
 		else
 			str = ft_strjoin(str, buffer);
 		if (!str)

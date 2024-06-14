@@ -6,7 +6,7 @@
 /*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:19:38 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/06/14 11:25:06 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/06/14 13:24:28 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	i = ft_strcpy(str, (char *)s1, i);
 	i = ft_strcpy(str, (char *)s2, s1_len);
 	str[i] = '\0';
-	free(s1);
+	if (s1_len > 0)
+		free(s1);
 	return (str);
 }
