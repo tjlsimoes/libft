@@ -6,7 +6,7 @@
 #    By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 12:49:31 by tjorge-l          #+#    #+#              #
-#    Updated: 2024/06/14 11:25:35 by tjorge-l         ###   ########.fr        #
+#    Updated: 2024/06/14 13:17:39 by tjorge-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME := libft.a
 CC := cc
 
 CFLAGS := -Wall -Wextra -Werror
+DEBUG_FLAGS = -g
 
 SRC := ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
@@ -50,6 +51,10 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+debug: CFLAGS += $(DEBUG_FLAGS)
+debug: $(OBJ)
+	ar -crs $(NAME) $(OBJ)
+
+.PHONY: all bonus debug clean fclean re
 # https://www.baeldung.com/linux/a-so-extension-files
 # https://medium.com/@ayogun/makefile-basics-beginner-intermediate-c92377542c2c
