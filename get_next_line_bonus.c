@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjorge-l <tjorge-l@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: tjorge-l <tjorge-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:20:02 by tjorge-l          #+#    #+#             */
-/*   Updated: 2024/06/14 15:53:00 by tjorge-l         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:29:30 by tjorge-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	*get_next_line(int fd)
 	mem[fd - 3] = str_with_lb_eof(fd, mem[fd - 3]);
 	if (!mem[fd - 3])
 		return (NULL);
-	remains = get_substring(mem[fd - 3], 
+	remains = get_substring(mem[fd - 3],
 			idx_line_break(mem[fd - 3]) + 1, -1, 1);
 	str_til_lb_eof = get_substring(mem[fd - 3],
 			0, idx_line_break(mem[fd - 3]), 0);
